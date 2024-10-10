@@ -32,12 +32,14 @@ __all__ = [
 
 _all_modules = [
     'LEMamba',
-    'LFormer'
+    'LFormer',
+    'FeINFN'
 ]
 
 _all_model_class_name = [
     'LEMambaNet',
-    'AttnFuseMain'
+    'AttnFuseMain',
+    'FeINFNet'
 ]
 
 assert len(_all_modules) == len(_all_model_class_name), 'length of modules and registry names should be the same'
@@ -79,6 +81,7 @@ def _active_load_module(module_name, model_class_name):
 # register all models
 from .LEMamba import LEMambaNet
 from .LFormer import AttnFuseMain
+from .FeINFN import FeINFNet
 
 
 
